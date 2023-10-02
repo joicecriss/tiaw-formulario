@@ -10,31 +10,23 @@
     <script src="https://kit.fontawesome.com/c7dc4001be.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!--
-        • A atividade de hoje é criar um formulário com os campos Nome, Celular, E-mail e CPF. Os campos de celular e cpf devem
-        apresentar máscara: telefone (xx) xxxxx-xxxx; cpf xxx.xxx.xxx-xx
-
-        • O html da página deve utilizar tags html5 e apresentar as propriedades de display flex.
-
-        • Apresente um layout agradável utilizando estilização CSS. 
-
-        • Inclua ícones ao em seus inputs (lateral esquerda ou direita).
-
-        • Poste seu projeto zipado em que a pasta raiz deve ter o seu nome.
-    -->
     <section>
         <h1>Cadastro</h1>
         <p>Preencha todos os campos:</p>
         <form action="">
             <label for="name">Nome <i class="fa-solid fa-user"></i></label>
-            <input type="text" name="name" id="name" placeholder="Digite seu Nome" pattern="" title="">
-            <label for="phone">Celular <i class="fa-solid fa-phone"></i></label>
-            <input type="text" name="phone" id="phone" placeholder="Digite seu número de celular" pattern="" title="" maxlength="11">
+            <input type="text" name="name" id="name" placeholder="Digite seu Nome" pattern="[A-Za-z\s]+" title="" oninput="validarNome(this)" required>
+
+            <label for="phone">Telefone <i class="fa-solid fa-phone"></i></label>
+            <input type="text" name="phone" id="phone" placeholder="Digite seu número de celular" pattern="\(\d{2}\) \d{5}-\d{4}" title="" maxlength="11" oninput="aplicarMascaraTelefone(this)" required>
+
             <label for="email">E-mail <i class="fa-solid fa-envelope"></i></label>
-            <input type="email" name="email" id="email" placeholder="Digite seu email" pattern="" title="">
+            <input type="email" name="email" id="email" placeholder="Digite seu email" pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" title="" required>
+
             <label for="document">CPF <i class="fa-solid fa-id-card"></i></label>
-            <input type="text" name="document" id="document" placeholder="Digite seu CPF" pattern="" title="">
-            <button type="button">Enviar <i class="fa-solid fa-location-arrow"></i></button>
+            <input type="text" name="document" id="document" placeholder="Digite seu CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="" maxlength="11" oninput="aplicarMascaraCPF(this)" required>
+
+            <button type="submit" onclick="enviarDados()">Enviar <i class="fa-solid fa-location-arrow"></i></button>
         </form>
     </section>
 

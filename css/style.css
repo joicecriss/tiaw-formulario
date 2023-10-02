@@ -1,0 +1,68 @@
+body {
+    padding: 12rem;
+    margin: auto;
+    font-family: sans-serif;
+}
+
+section {
+    margin: auto;
+    padding: 2rem;
+    max-width: 25rem;
+    border-style: solid;
+    border-radius: 2rem;
+    border-color: purple;
+}
+
+section > form {
+    display: grid;
+    justify-content: center;
+}
+
+i {
+    color: purple;
+}
+
+h1 {
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+p {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+label {
+    font-size: 12px;
+    margin-bottom: 0.5rem;
+}
+
+input {
+    padding: .25rem;
+    margin-bottom: 0.5rem;
+    width: 20rem;
+    background-color: rgb(238, 231, 238);
+    border-radius: .5rem;
+    border-color: purple;
+}
+
+button {
+    margin-top: 1rem;
+    padding: .5rem;
+    font-size: 13px;
+    background-color: rgb(235, 220, 235);
+    border-radius: 1rem;
+    border-color: purple;
+    color: purple;
+}
+
+button:hover {
+    background-color: purple;
+    border-color: rgb(235, 220, 235);
+    color: white;    
+}
+
+button:hover > i {
+    color: white;
+}

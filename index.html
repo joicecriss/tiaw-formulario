@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/c7dc4001be.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--
+        • A atividade de hoje é criar um formulário com os campos Nome, Celular, E-mail e CPF. Os campos de celular e cpf devem
+        apresentar máscara: telefone (xx) xxxxx-xxxx; cpf xxx.xxx.xxx-xx
+
+        • O html da página deve utilizar tags html5 e apresentar as propriedades de display flex.
+
+        • Apresente um layout agradável utilizando estilização CSS. 
+
+        • Inclua ícones ao em seus inputs (lateral esquerda ou direita).
+
+        • Poste seu projeto zipado em que a pasta raiz deve ter o seu nome.
+    -->
+    <section>
+        <h1>Cadastro</h1>
+        <p>Preencha todos os campos:</p>
+        <form action="">
+            <label for="name">Nome <i class="fa-solid fa-user"></i></label>
+            <input type="text" name="name" id="name" placeholder="Digite seu Nome" pattern="" title="">
+            <label for="phone">Celular <i class="fa-solid fa-phone"></i></label>
+            <input type="text" name="phone" id="phone" placeholder="Digite seu número de celular" pattern="" title="" maxlength="11">
+            <label for="email">E-mail <i class="fa-solid fa-envelope"></i></label>
+            <input type="email" name="email" id="email" placeholder="Digite seu email" pattern="" title="">
+            <label for="document">CPF <i class="fa-solid fa-id-card"></i></label>
+            <input type="text" name="document" id="document" placeholder="Digite seu CPF" pattern="" title="">
+            <button type="button">Enviar <i class="fa-solid fa-location-arrow"></i></button>
+        </form>
+    </section>
+
+    <script src="/scripts/scripts.js"></script>
+</body>
+</html>
